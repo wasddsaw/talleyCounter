@@ -1,14 +1,29 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Tally Counter
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <button ion-button icon-only color="secondary" (click)="add()">
+              <ion-icon name="add"></ion-icon>
+            </button>
+      </ion-col>
+      <ion-col>
+          <p> {{ counter }} </p>
+      </ion-col>
+      <ion-col>
+          <button ion-button icon-only color="danger" (click)="minus()">
+              <ion-icon name="remove"></ion-icon>
+            </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
 </ion-content>

@@ -7,7 +7,31 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  counter:number;
+
+  constructor(public navCtrl: NavController) {}
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad');
+
+    // set counter to zero
+    this.counter = 0;
+
+  }
+
+  add(){
+    console.log('add');
+
+    this.counter = this.counter + 1;
+  }
+  minus(){
+    console.log('minus');
+
+    this.counter = this.counter - 1;
+
+    if(this.counter < 0) {
+      this.counter = 0;
+    }
 
   }
 
