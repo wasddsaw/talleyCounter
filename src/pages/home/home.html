@@ -8,22 +8,20 @@
 
 <ion-content padding>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-          <button ion-button icon-only color="secondary" (click)="add()">
-              <ion-icon name="add"></ion-icon>
-            </button>
-      </ion-col>
-      <ion-col>
-          <p> {{ counter }} </p>
-      </ion-col>
-      <ion-col>
-          <button ion-button icon-only color="danger" (click)="minus()">
-              <ion-icon name="remove"></ion-icon>
-            </button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <p class="alignleft">
+    <button ion-button icon-only color="secondary" (click)="add()">
+    <ion-icon name="add"></ion-icon>
+    </button>
+  </p>
+
+  <p class="alignright">
+    <button ion-button icon-only color="danger" (click)="minus()">
+      <ion-icon name="remove"></ion-icon>
+    </button>
+  </p>
+
+  <p align="center"> {{ counter }} </p>
+  
+  <button ion-button (click)="reset()" block>Reset</button>
   
 </ion-content>

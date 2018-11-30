@@ -24,15 +24,17 @@ export class HomePage {
 
     this.counter = this.counter + 1;
   }
+
   minus(){
     console.log('minus');
-
     this.counter = this.counter - 1;
-
     if(this.counter < 0) {
       this.counter = 0;
     }
+  }
 
+  reset(){
+    this.counter = 0;
   }
 
 }
